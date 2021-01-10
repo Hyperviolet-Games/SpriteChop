@@ -31,7 +31,7 @@ def chop(config_path: str, save=True) -> list:
                 if save:
                     new_img.save(f'{path[0]}/{name}')
                 files.append(name)
-            i += 1
+                i += 1
             x += w
         y += h
     return files
