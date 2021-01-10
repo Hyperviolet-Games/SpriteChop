@@ -19,4 +19,12 @@ def test_image_equality():
 
 def test_unused_areas():
     """Areas with no visible pixels shouldn't output files"""
-    assert sc.chop("tests/json/2x2.json") == 2
+    assert len(sc.chop("tests/json/2x2.json", False)) == 2
+
+
+def test_names():
+    files = sc.chop("tests/json/4colors.json", True)
+    assert files == ["red.png", "blue.png", "green.png", "purple.png"]
+
+    files = sc.chop("tests/json/2x2.json", True)
+    assert files == ["2x2_0.png", "2x2_3.png"]

@@ -1,0 +1,11 @@
+{
+    "image_path": "tests/images/4colors.png",
+    "width": 1,
+    "height": 1,
+    "names": [
+        "red",
+        "blue",
+        "green",
+        "purple"
+    ]
+}
