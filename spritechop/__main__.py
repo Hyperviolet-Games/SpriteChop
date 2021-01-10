@@ -28,8 +28,14 @@ def chop(config_path: str, save=True) -> list:
                 else:
                     name = f'{path[1][:-4]}_{i}.png'
 
+                if 'name_prefix' in config:
+                    name = config['name_prefix'] + name
+
                 if save:
-                    new_img.save(f'{path[0]}/{name}')
+                    if path[0] != '':
+                        new_img.save(f'{path[0]}/{name}')
+                    else:
+                        new_img.save(name)
                 files.append(name)
                 i += 1
             x += w
