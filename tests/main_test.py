@@ -27,4 +27,4 @@ def test_names():
     assert files == ["t_red.png", "t_blue.png", "t_green.png", "t_purple.png"]
 
     files = sc.chop("tests/json/2x2.json", False)
-    assert files == ["2x2_0.png", "2x2_3.png"]
+    assert files == ["2x2_0.png", "2x2_1.png"]
