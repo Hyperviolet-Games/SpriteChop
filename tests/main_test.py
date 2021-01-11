@@ -23,8 +23,8 @@ def test_unused_areas():
 
 
 def test_names():
-    files = sc.chop("tests/json/4colors.json", True)
-    assert files == ["red.png", "blue.png", "green.png", "purple.png"]
+    files = sc.chop("tests/json/4colors.json", False)
+    assert files == ["t_red.png", "t_blue.png", "t_green.png", "t_purple.png"]
 
-    files = sc.chop("tests/json/2x2.json", True)
+    files = sc.chop("tests/json/2x2.json", False)
     assert files == ["2x2_0.png", "2x2_3.png"]
